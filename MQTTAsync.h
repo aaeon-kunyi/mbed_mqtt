@@ -156,10 +156,10 @@ private:
     
     PacketId packetid;
     
-    typedef FP<void, Result*> resultHandlerFP;    
+    typedef FP_T<void, Result*> resultHandlerFP;    
     resultHandlerFP connectHandler; 
     
-    typedef FP<void, Message*> messageHandlerFP;
+    typedef FP_T<void, Message*> messageHandlerFP;
     struct MessageHandlers
     {
     	const char* topic;
@@ -180,7 +180,7 @@ private:
 	
 	messageHandlerFP defaultMessageHandler;
     
-    typedef FP<int, connectionLostInfo*> connectionLostFP;
+    typedef FP_T<int, connectionLostInfo*> connectionLostFP;
     
     connectionLostFP connectionLostHandler;
     

@@ -265,10 +265,10 @@ private:
     struct MessageHandlers
     {
         const char* topicFilter;
-        FP<void, MessageData&> fp;
+        FP_T<void, MessageData&> fp;
     } messageHandlers[MAX_MESSAGE_HANDLERS];      // Message handlers are indexed by subscription topic
 
-    FP<void, MessageData&> defaultMessageHandler;
+    FP_T<void, MessageData&> defaultMessageHandler;
 
     bool isconnected;
 
